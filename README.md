@@ -1,2 +1,2 @@
-# PHONEGAP_TEMPLATE_FALCONSOFT
-Plantilla para aplicacion Movile
+# PHONEGAP TEMPLATE FALCONSOFT
+Plantilla para aplicacion Movil
