@@ -44,7 +44,7 @@
 <div data-role="page" id="bar">
 
     <div data-role="header">
-    <a href="#" class="ui-btn-left ui-btn ui-btn-inline ui-mini ui-corner-all ui-btn-icon-left ui-icon-delete">Cancel</a>
+    <a href="#foo" class="ui-btn-left ui-btn ui-btn-inline ui-mini ui-corner-all ui-btn-icon-left ui-icon-delete">Cancel-1</a>
 <h1>My App</h1>
     <button class="ui-btn-right ui-btn ui-btn-b ui-btn-inline ui-mini ui-corner-all ui-btn-icon-right ui-icon-check">Save</button>
 </div>
@@ -77,8 +77,21 @@
 
 
 </div><!-- /page -->
-</body>
 
+
+    <script type="text/javascript" charset="utf-8">
+
+    // Wait for Cordova to load
+    //
+    document.addEventListener("deviceready", onDeviceReady, false);
+
+    // Cordova is ready
+    //
+    function onDeviceReady() {
+        navigator.splashscreen.show();
+    }
+
+    </script>
 
 
 
