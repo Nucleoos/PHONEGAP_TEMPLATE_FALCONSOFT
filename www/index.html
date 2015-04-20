@@ -17,6 +17,45 @@
 
         <script type="text/javascript" charset="utf-8" src="cordova.js"></script> 
 
+
+            <script type="text/javascript" charset="utf-8">
+
+    // Wait for device API libraries to load
+    //
+    document.addEventListener("deviceready", onDeviceReady, false);
+
+    // device APIs are available
+    //
+    function onDeviceReady() {
+        // Empty
+    }
+
+    // Show a custom alert
+    //
+    function showAlert() {
+        navigator.notification.alert(
+            'You are the winner!',  // message
+            'Game Over',            // title
+            'Done'                  // buttonName
+        );
+    }
+
+    // Beep three times
+    //
+    function playBeep() {
+        navigator.notification.beep(3);
+    }
+
+    // Vibrate for 2 seconds
+    //
+    function vibrate() {
+        navigator.notification.vibrate(2000);
+    }
+
+    </script>
+
+
+
 <title>Title</title>
     </head>
     <body>
@@ -32,6 +71,12 @@
     <div role="main" class="ui-content">
         <p>I'm first in the source order so I'm shown as the page.</p>
         <p>View internal page called <a href="#bar">bar</a></p>
+
+            <p><a href="#" onclick="showAlert(); return false;">Show Alert</a></p>
+    <p><a href="#" onclick="playBeep(); return false;">Play Beep</a></p>
+    <p><a href="#" onclick="vibrate(); return false;">Vibrate</a></p>
+
+    
     </div><!-- /content -->
 
     <div data-role="footer">
