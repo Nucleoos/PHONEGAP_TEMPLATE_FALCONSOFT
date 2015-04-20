@@ -16,6 +16,8 @@
 
 
         <script type="text/javascript" charset="utf-8" src="cordova.js"></script> 
+        <script type="text/javascript" src="barcodescanner.js"></script>
+        <script type="text/javascript" src="js/index.js"></script>
 
 
             <script type="text/javascript" charset="utf-8">
@@ -62,7 +64,7 @@
 
 
 <!-- Start of first page -->
-<div data-role="page" id="foo">
+<div data-role="page" id="foo" class="ui-body-e">
 
     <div data-role="header">
         <h1>Foo</h1>
@@ -72,11 +74,13 @@
         <p>I'm first in the source order so I'm shown as the page.</p>
         <p>View internal page called <a href="#bar">bar</a></p>
 
+        <p><a href="#" class="topcoat-button" id="scan">SCAN</a></p>
+
             <p><a href="#" onclick="showAlert(); return false;">Show Alert</a></p>
     <p><a href="#" onclick="playBeep(); return false;">Play Beep</a></p>
     <p><a href="#" onclick="vibrate(); return false;">Vibrate</a></p>
 
-    
+
     </div><!-- /content -->
 
     <div data-role="footer">
@@ -92,9 +96,9 @@
 <div data-role="page" id="bar">
 
     <div data-role="header">
-    <a href="#foo" class="ui-btn-left ui-btn ui-btn-inline ui-mini ui-corner-all ui-btn-icon-left ui-icon-delete">Cancel-1</a>
+    <a href="#foo" class="ui-btn-left ui-btn ui-btn-inline ui-mini ui-corner-all ui-btn-icon-left ui-icon-delete  ui-body-e">Cancel-1</a>
 <h1>My App</h1>
-    <button class="ui-btn-right ui-btn ui-btn-b ui-btn-inline ui-mini ui-corner-all ui-btn-icon-right ui-icon-check">Save</button>
+    <button class="ui-btn-right ui-btn ui-btn-b ui-btn-inline ui-mini ui-corner-all ui-btn-icon-right ui-icon-check  ">Save</button>
 </div>
 
 
