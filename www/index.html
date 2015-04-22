@@ -13,115 +13,26 @@
     
         <script src="js/jquery-1.11.2.min.js"></script>
         <script src="js/jquery.mobile-1.4.5.js"></script>
-
-
-        <script type="text/javascript" charset="utf-8" src="cordova.js"></script> 
-        <script type="text/javascript" src="barcodescanner.js"></script>
-        <script type="text/javascript" src="js/index.js"></script>
-
-
-            <script type="text/javascript" charset="utf-8">
-
-    // Wait for device API libraries to load
-    //
-    document.addEventListener("deviceready", onDeviceReady, false);
-
-    // device APIs are available
-    //
-    function onDeviceReady() {
-        // Empty
-    }
-
-    // Show a custom alert
-    //
-    function showAlert() {
-        navigator.notification.alert(
-            'You are the winner!',  // message
-            'Game Over',            // title
-            'Done'                  // buttonName
-        );
-    }
-
-    // Beep three times
-    //
-    function playBeep() {
-        navigator.notification.beep(3);
-    }
-
-    // Vibrate for 2 seconds
-    //
-    function vibrate() {
-        navigator.notification.vibrate(2000);
-    }
-
-    </script>
-
-
-
-<title>Title</title>
-    </head>
-    <body>
-
-
-<!-- Start of first page -->
-<div data-role="page" id="foo" class="ui-body-e">
-
-    <div data-role="header">
-        <h1>Foo</h1>
-    </div><!-- /header -->
-
-    <div role="main" class="ui-content">
-        <p>I'm first in the source order so I'm shown as the page.</p>
-        <p>View internal page called <a href="#bar">bar</a></p>
-
-        <p><a href="#" class="topcoat-button" id="scan">SCAN</a></p>
-
-            <p><a href="#" onclick="showAlert(); return false;">Show Alert</a></p>
-    <p><a href="#" onclick="playBeep(); return false;">Play Beep</a></p>
-    <p><a href="#" onclick="vibrate(); return false;">Vibrate</a></p>
-
-
-    </div><!-- /content -->
-
-    <div data-role="footer">
-        <h4>Page Footer</h4>
-    </div><!-- /footer -->
-</div><!-- /page -->
-
-
-
+        <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
+        <script type="text/javascript" charset="utf-8" src="index.js"></script>  
 
 
 <!-- Start of second page -->
 <div data-role="page" id="bar">
 
     <div data-role="header">
-    <a href="#foo" class="ui-btn-left ui-btn ui-btn-inline ui-mini ui-corner-all ui-btn-icon-left ui-icon-delete  ui-body-e">Cancel-1</a>
-<h1>My App</h1>
-    <button class="ui-btn-right ui-btn ui-btn-b ui-btn-inline ui-mini ui-corner-all ui-btn-icon-right ui-icon-check  ">Save</button>
-</div>
+    <a href="#" class="ui-btn ui-btn-left ui-btn-inline ui-icon-gear ui-btn-icon-notext" onclick="exitFromApp()">Icon only</a>
+<h1>MyNeighborhood</h1>
+    <a href="#" class="ui-btn ui-btn-right ui-btn-inline ui-icon-power ui-btn-icon-notext" onclick="exitFromApp()">Icon only</a>
+    </div>
 
 
 
 <div class="wrapper">
-<form>
-    <ul data-role="listview" data-filter="true" data-filter-placeholder="Search fruits..." data-inset="true">
-    <li><a href="#">Apple</a></li>
-    <li><a href="#">Banana</a></li>
-    <li><a href="#">Cherry</a></li>
-    <li><a href="#">Cranberry</a></li>
-    <li><a href="#">Grape</a></li>
-    <li><a href="#">Orange</a></li>
-</ul>
-</form>
+    <h1>Hello Word</h1>
 </div>
 
-    <div role="main" class="ui-content">
-        <p>I'm the second in the source order so I'm hidden when the page loads. I'm just shown if a link that references my id is beeing clicked.</p>
-        <p><a href="#foo">Back to foo</a></p>
-    </div><!-- /content -->
 
-<button name="buttonClick" onclick="exitFromApp()">Click Me!</button>
 
 <div class="ui-footer ui-bar-a" data-theme="a" data-role="footer" role="contentinfo">
 <h1 class="ui-title" role="heading" aria-level="1">External footer</h1>
@@ -130,36 +41,6 @@
 
 
 </div><!-- /page -->
-
-
-    <script type="text/javascript" charset="utf-8">
-
-    // Wait for Cordova to load
-    //
-    document.addEventListener("deviceready", onDeviceReady, false);
-
-    // Cordova is ready
-    //
-    function onDeviceReady() {
-        navigator.splashscreen.show();
-    }
-
-    </script>
-
-
-    <script type="text/javascript" charset="utf-8">
-
-            function onLoad()
-            {
-                  document.addEventListener("deviceready", onDeviceReady, true);
-            }
-
-            function exitFromApp()
-             {
-                navigator.app.exitApp();
-             }
-
-        </script>
 
 
 
